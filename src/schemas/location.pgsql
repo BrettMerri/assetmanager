@@ -2,6 +2,8 @@
 
 -- DROP TABLE public.location;
 
+CREATE SEQUENCE location_id_seq START WITH 1;
+
 CREATE TABLE public.location
 (
     id integer NOT NULL DEFAULT nextval('location_id_seq'::regclass),
