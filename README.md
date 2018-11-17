@@ -1,1 +1,1 @@
-# nodejs-react-boilerplate
+# Asset Manager
