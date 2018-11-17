@@ -1,8 +1,7 @@
 import { Formik, FormikActions, FormikProps } from 'formik';
 import * as React from 'react';
-import './App.css';
 
-class App extends React.Component {
+class Home extends React.Component {
   public handleSubmit(values: any, actions: FormikActions<{ name: string; }>) {
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
@@ -28,9 +27,9 @@ class App extends React.Component {
 
   public render() {
     return (
-      <div className="App">
+      <div className="home">
         <Formik
-          initialValues={{ name: 'jared' }}
+          initialValues={{ name: 'test' }}
           onSubmit={this.handleSubmit}
           render={this.formikRender}
         />
@@ -39,4 +38,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Home;
