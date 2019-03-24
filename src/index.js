@@ -40,12 +40,12 @@ app.use((req, res, next) => {
 
 app.use((err, req, res, next) => {
   if (err instanceof BadRequestError) {
-    res.status(400).json(err.name);
+    res.status(400).json({ error: err.name });
     next();
   }
 
   if (err instanceof NotFoundError) {
-    res.status(404).json('not found');
+    res.status(404).end();
     next();
   }
 
