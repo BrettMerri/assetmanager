@@ -2,6 +2,8 @@
 
 -- DROP TABLE public.model;
 
+CREATE SEQUENCE model_id_seq START WITH 1;
+
 CREATE TABLE public.model
 (
     id integer NOT NULL DEFAULT nextval('model_id_seq'::regclass),

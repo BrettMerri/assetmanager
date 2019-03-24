@@ -2,6 +2,8 @@
 
 -- DROP TABLE public.type;
 
+CREATE SEQUENCE type_id_seq START WITH 1;
+
 CREATE TABLE public.type
 (
     id integer NOT NULL DEFAULT nextval('type_id_seq'::regclass),

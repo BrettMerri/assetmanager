@@ -2,6 +2,8 @@
 
 -- DROP TABLE public.asset;
 
+CREATE SEQUENCE asset_id_seq START WITH 1;
+
 CREATE TABLE public.asset
 (
     serial_number text COLLATE pg_catalog."default" NOT NULL,

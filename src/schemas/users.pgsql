@@ -2,6 +2,8 @@
 
 -- DROP TABLE public.users;
 
+CREATE SEQUENCE user_id_seq START WITH 1;
+
 CREATE TABLE public.users
 (
     id integer NOT NULL DEFAULT nextval('user_id_seq'::regclass),

@@ -2,9 +2,11 @@
 
 -- DROP TABLE public.make;
 
+CREATE SEQUENCE make_id_seq START WITH 1;
+
 CREATE TABLE public.make
 (
-    id integer NOT NULL DEFAULT nextval('brand_id_seq'::regclass),
+    id integer NOT NULL DEFAULT nextval('make_id_seq'::regclass),
     name text COLLATE pg_catalog."default" NOT NULL,
     type_id integer NOT NULL,
     created timestamp(6) with time zone NOT NULL,
